@@ -21,7 +21,7 @@ fun CategoryTabRow(
     modifier: Modifier = Modifier,
     categories: List<String> = listOf("전체", "추천", "커피", "음료", "디저트", "세트메뉴", "신메뉴"),
     initialTabIndex: Int = 0,
-    onCategorySelected: (index: Int, category: String) -> Unit = { _, _ -> }
+    onCategorySelected: (index: Int, category: String) -> Unit = { _, _ -> },
 ) {
     var selectedTabIndex by remember { mutableIntStateOf(initialTabIndex) }
 
@@ -32,7 +32,7 @@ fun CategoryTabRow(
         onCategorySelected = { index ->
             selectedTabIndex = index
             onCategorySelected(index, categories[index])
-        }
+        },
     )
 }
 
@@ -45,18 +45,18 @@ fun CategoryTabRowContent(
     categories: List<String>,
     selectedTabIndex: Int,
     onCategorySelected: (Int) -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     PrimaryScrollableTabRow(
         selectedTabIndex = selectedTabIndex,
         edgePadding = 16.dp,
-        modifier = modifier
+        modifier = modifier,
     ) {
         categories.forEachIndexed { index, category ->
             Tab(
                 selected = selectedTabIndex == index,
                 onClick = { onCategorySelected(index) },
-                text = { Text(text = category) }
+                text = { Text(text = category) },
             )
         }
     }

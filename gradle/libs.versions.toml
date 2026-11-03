@@ -9,6 +9,7 @@ material = "1.14.0"
 activityKtx = "1.13.0"
 constraintlayout = "2.2.2"
 roomKtx = "2.8.5"
+kotlin = "2.4.10"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -23,4 +24,5 @@ androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = 
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-
+org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

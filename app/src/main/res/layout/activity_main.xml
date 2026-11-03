@@ -7,21 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-
-    <LinearLayout
-        android:orientation="horizontal"
+    <androidx.compose.ui.platform.ComposeView
+        android:id="@+id/composeCategoryTabRow"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </LinearLayout>
-
-
-
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
