@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- CategoryTabRow -->
     <androidx.compose.ui.platform.ComposeView
         android:id="@+id/composeCategoryTabRow"
         android:layout_width="match_parent"
