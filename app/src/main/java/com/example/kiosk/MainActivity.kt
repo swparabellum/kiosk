@@ -29,5 +29,11 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "선택된 카테고리: $category", Toast.LENGTH_SHORT).show()
             }
         }
+
+        binding.composeBeverageGrid.setContent {
+            BeverageVerticalGrid { item ->
+                Toast.makeText(this, "선택된 음료: ${item.name}", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 }
