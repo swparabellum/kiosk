@@ -1,5 +1,6 @@
 package com.example.kiosk
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -22,6 +23,10 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+        binding.adminModBtn.setOnClickListener {
+            val adminIntent = Intent(this, AdminmodeActivity::class.java)
+            startActivity(adminIntent)
         }
 
         binding.composeCategoryTabRow.setContent {

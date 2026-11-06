@@ -7,24 +7,41 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- CategoryTabRow -->
-    <androidx.compose.ui.platform.ComposeView
-        android:id="@+id/composeCategoryTabRow"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- BeverageVerticalGrid -->
-    <androidx.compose.ui.platform.ComposeView
-        android:id="@+id/composeBeverageGrid"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/composeCategoryTabRow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/adminModBtn"
+                android:text="admin모드"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- CategoryTabRow -->
+        <androidx.compose.ui.platform.ComposeView
+            android:id="@+id/composeCategoryTabRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- BeverageVerticalGrid -->
+        <androidx.compose.ui.platform.ComposeView
+            android:id="@+id/composeBeverageGrid"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
